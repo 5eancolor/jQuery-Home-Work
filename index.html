@@ -1,87 +1,194 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
-  <title>使用 jQuery 打造互動性網頁動畫效果</title>
-  <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Anton'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
-  <link rel="stylesheet" href="css/all.css">
-  <script src="js/jquery-4.0.0.min.js"></script>
-  <script src="js/all.js"></script>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <style>
-    .swiper-container {
-      width: 800px;
-      height: 400px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/all.css">
+    <title>Sean:【最終試煉】使用 jQuery 打造互動性網頁動畫效果</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EKN5FYVXC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2EKN5FYVXC');
+</script>
+
+    <meta name='description' content='Sean html css實作練習' />
+    <meta property="og:title" content="Sean:最後一版PSD練習" />
+    <meta property="og:description" content="Sean html css實作練習">
+    <meta property="og:type" content="website" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
 </head>
-
 <body>
-  <div class="header">
-    <ul class="menu">
-      <li><a href="#">首頁</a></li>
-      <li>
-        <a href="#" class="dropdown">產品介紹</a>
-        <ul class="dropdown-open">
-          <li><a href="#">Html 5基礎教</a></li>
-          <li><a href="#">響應式網站設計</a></li>
-          <li><a href="#">jQuery 實戰教學</a></li>
-        </ul>
-      <li>聯絡我們</li>
-      </li>
+<div class="wrap">
+<div class="header">
+  <div class="sns">
+    <ul>
+     <li class="facebook"><a href="#"><img src="./images/icon-facebook.png" alt="fb icon">粉絲團</a></li>
+     <li class="twitter"><a href="#"><img src="./images/icon-twitter.png" alt="tw icon">追隨我們</a></li>
     </ul>
   </div>
-  <!-- Slider main container -->
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">六角學院讓您奠定良好的前端基礎</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
+  <div class="nav">
+    <div class="logo">
+      <h1><a href="#">六角學院</a></h1>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-
+    <div class="menu">
+      <ul>
+        <li><a href="#">首頁</a></li>
+        <li >
+          <a href="#" class="dropdown">產品介紹 ⌵</a>
+          <ul class="dropdown-open">
+            <li><a href="#">Html 5基礎教學</a></li>
+            <li><a href="#">響應式網站設計</a></li>
+            <li><a href="#">jQuery 實戰教學</a></li>
+          </ul>
+        </li>
+        <li><a href="#">聯絡我們</a></li>
+      </ul>
+    </div>
   </div>
+</div>
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="./images/banner.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="./images/banner.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="./images/banner.jpg" alt=""></div>
+  </div>
+  <!-- If we need pagination 
+  <div class="swiper-pagination"></div>-->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-  <script>
-    var mySwiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      speed: 3000,
-      loop: true,
-      autoplay: {
-        delay: 1500,
-      },
-      effect: 'cube',
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+  <div class="catch-copy">
+  <h2>六角學院<br>
+讓您奠定良好的前端基礎</h2>
+</div>
+</div>
 
+<div class="content">
+  <ul>
+    <li class="jQuery">
+      <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png" data-lightbox="image-1" data-title="Html 5基礎教學"><img src="./images/img_html5.png" alt=""></a>
+      <h3>Html 5基礎教學</h3>
+      <h4>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</h4></li>
+    <li>
+      <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png" data-lightbox="image-1" data-title="響應式網站設計"><img src="./images/img_responsive.png" alt=""></a>
+      <h3>響應式網站設計</h3>
+      <h4>響應式網站設計 (Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</h4>
+    </li>
+    <li class="jQuery">
+      <a href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png" data-lightbox="image-1" data-title="jQuery 實戰教學"><img src="./images/img_jquery.png" alt=""></a>
+      <h3>jQuery 實戰教學</h3>
+      <h4>
+        <ul>
+          <li>本課程有以下特色：</li>
+          <li>．瞭解變數的使用方法</li>
+          <li>．學習並操作DOM</li>
+          <li>．學習基本數學運算方法</li>
+          <li>．套件的操作及運用</li>
+        </ul>
+      </h4>
+    </li>
+  </ul>
+</div>
+<div class="compare">
+  <h3>線上課程及實體課程的差異</h3>
+  <table>
+    <tr>
+      <th>項目</th>
+      <th>六角學院線上課程</th>
+      <th>一般線上課程</th>
+      <th>實體課程</th>
+    </tr>
+    <tr>
+      <td>費用</td>
+      <td class="td-green">較低</td>
+      <td class="td-green">較低</td>
+      <td>較高</td>
+    </tr>
+    <tr>
+      <td>學習效果</td>
+      <td>一般</td>
+      <td class="td-green">較低</td>
+      <td class="td-green">很好</td>
+    </tr>
+    <tr>
+      <td>Code Review</td>
+      <td class="td-green">有</td>
+      <td>無</td>
+      <td>不一定</td>
+    </tr>
+    <tr>
+      <td>課程更新速度</td>
+      <td class="td-green">普通</td>
+      <td class="td-green">普通</td>
+      <td>較慢</td>
+    </tr>
+    <tr>
+      <td>多次學習</td>
+      <td class="td-green">可</td>
+      <td>可</td>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <td>字幕</td>
+      <td class="td-green">有</td>
+      <td>不一定</td>
+      <td>板書</td>
+    </tr>
+  </table>
+</div>
+<div class="survey">
+  <h3>對我們課程有興趣嗎？<br>歡迎留下您的資料</h3>
+  <form action="index.html">
+    <div class="form-up">
+      <div class="form-left">
+        <label for="name">姓名</label>
+        <input type="text" id="name" placeholder="六角講師">
+        <label for="tel">電話</label>
+        <input type="tel" id="tel" placeholder="000000000">
+        <label for="mail">信箱</label>
+        <input type="mail" id="mail" placeholder="example@hexschool.com">
+      </div>
+      <div class="form-right">
+        <label for="memo">備註</label>
+        <textarea name="memo" id="memo"></textarea>
+      </div>
+    </div>
+    <div class="form-down">
+      <input type="submit" value="送出">
+    </div>
+  </form>
+</div>
+<div class="footer">
+  <div class="logo2"><img src="./images/logo.png" alt="logo"></div>
+  <div class="contact">
+    <ul>
+      <li>聯絡我們：<a href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+      <li>電話：<a href="tel:+0987654321">0987654321</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+<div class="arrow">
+<a href="#"><img src="./images/Arrow-Up.svg" alt=""></a>
+</div>
+<script src="./js/jquery-4.0.0.min.js"></script>
+<script src="./js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="./js/all.js"></script>
 
-    })
-  </script>
 </body>
-
 </html>
